@@ -16,10 +16,15 @@
 | Slides  |  Colab |
 | ----------- | ----------- |
 | [lecture 1](http://web.stanford.edu/class/cs224w/slides/01-intro.pdf) | /  |
-| [lecture 2](http://web.stanford.edu/class/cs224w/slides/02-tradition-ml.pdf) |  Colab   |
+| [lecture 2](http://web.stanford.edu/class/cs224w/slides/02-tradition-ml.pdf) |  Colab-1   |
+| [lecture 3](http://web.stanford.edu/class/cs224w/slides/03-nodeemb.pdf) | / |
 
 
-# About features
+<br><br>
+
+---
+
+# About Features (in lecture 2)
 
 - ## Node-level feature: (Structures and Position)
   - ### Node degree (importance features and structure-based feature)
@@ -43,7 +48,25 @@
   
 - ## Graph-level Kernels: (similarity between graphs) 
     > <font style="color: rgb(250,250,0)">Design graph feature vector</font>
-  - ### Graphlet Kernel
-  - ### Weisfeiler-Lehman Kernel
-  - ### Random-walk Kernel
-  - ### Shortest-path graph Kernel ...
+  - #### Graphlet Kernel (bag-of-graphlets representation)
+  - #### Weisfeiler-Lehman Kernel (bag-of-node-degrees representation)
+    Color Refinement & Hash aggregated colors
+  - #### Random-walk Kernel
+  - #### Shortest-path graph Kernel ...
+
+<br><br>
+
+---
+
+# About GNN Outputs
+
+<img src="md-img/image-20221008002758498.png" alt="md-img/image-20221008002758498" style="zoom:50%;" />
+
+
+<br><br><br>
+
+---
+
+# Embedding, Representation Learning
+> Learn the embedding is unsupervised
+- ### Random Walk
