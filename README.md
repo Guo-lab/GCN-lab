@@ -69,4 +69,23 @@
 
 # Embedding, Representation Learning
 > Learn the embedding is unsupervised
-- ### Random Walk
+- ## Random Walk
+  
+  <img src="md-img/image-20221009005529389.png" alt="image-20221009005529389" style="zoom:28%;" align='left'/>
+  <br><br><br><br>  
+  Most likely be the neighbor (should be because of their cos similarity) 
+  <br>
+  <br>
+  
+  <img src="md-img/image-20221009005422630.png" alt="image-20221009005422630" style="zoom:25%;" align = 'left'/>
+  
+  <br><br>
+  <br>
+
+  - ### DeepWalk
+  - ### Node2Vec
+  - ### biased random walk based on attributes, learnd weights
+  - ### To embed the nodes.
+    - Embed nodes and **sum/average** them
+    - Super-node spans (sub)graph, then embed that node
+    - Anonymous Walk Embeddings(times each anonymous walk happens or concatenate anonymous walks embeddings)
