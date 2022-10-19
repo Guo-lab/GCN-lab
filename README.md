@@ -16,10 +16,11 @@
 | Slides  |  Colab  |  Description |
 | ----------- | ----------- | ----------- |
 | [lecture 1](http://web.stanford.edu/class/cs224w/slides/01-intro.pdf) | /  | just Introduction |
-| [lecture 2](http://web.stanford.edu/class/cs224w/slides/02-tradition-ml.pdf) |  Colab-1 <font style="color: rgb(250,250,0)">**Probelm: Q7**  | about Features |
+| [lecture 2](http://web.stanford.edu/class/cs224w/slides/02-tradition-ml.pdf) |  Colab-1  <br> <font style="color: rgb(250,250,0)">**Point: Q7**  | about Features |
 | [lecture 3](http://web.stanford.edu/class/cs224w/slides/03-nodeemb.pdf) | / | |
 | [lecture 4](http://web.stanford.edu/class/cs224w/slides/04-pagerank.pdf) | / | about PageRank and Matrix Factoriztion |
 | [lecture 5](http://web.stanford.edu/class/cs224w/slides/05-message.pdf) | / | About Semi-supervised Node Classification |
+| [lecture 6](http://web.stanford.edu/class/cs224w/slides/06-GNN1.pdf)| Colab-2 (NEED GPU) | about GNN |
 
 
 <br><br>
@@ -126,3 +127,17 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
   - Classifier A & B (<font style="color: rgb(250,250,0)">How to Update</font>)
 
 - ### Loopy Belief Propagation
+  Tell neighbors what you think they are.
+
+## Correct and Smooth (C&S) to Post-Process
+- Base Predictor causes bias, errors.
+
+- Correct Step: Errors Diffusion.   
+  <img src="md-img/image-20221020004741184.png" alt="image-20221020004741184" style="zoom:25%;" />
+- Soft Label to Ground Truth Hard Label.
+- Smooth Step: Labels Diffusion. 
+  <img src="md-img/image-20221020005325445.png" alt="image-20221020005325445" style="zoom:25%;" />   
+- [About Normalized diffusion matrix.](https://mlg.eng.cam.ac.uk/zoubin/papers/zgl.pdf)
+
+
+
