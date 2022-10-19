@@ -13,11 +13,13 @@
 
 
 # Checklist:  
-| Slides  |  Colab |
-| ----------- | ----------- |
-| [lecture 1](http://web.stanford.edu/class/cs224w/slides/01-intro.pdf) | /  |
-| [lecture 2](http://web.stanford.edu/class/cs224w/slides/02-tradition-ml.pdf) |  Colab-1   |
-| [lecture 3](http://web.stanford.edu/class/cs224w/slides/03-nodeemb.pdf) | / |
+| Slides  |  Colab  |  Description |
+| ----------- | ----------- | ----------- |
+| [lecture 1](http://web.stanford.edu/class/cs224w/slides/01-intro.pdf) | /  | just Introduction |
+| [lecture 2](http://web.stanford.edu/class/cs224w/slides/02-tradition-ml.pdf) |  Colab-1 <font style="color: rgb(250,250,0)">**Probelm: Q7**  | about Features |
+| [lecture 3](http://web.stanford.edu/class/cs224w/slides/03-nodeemb.pdf) | / | |
+| [lecture 4](http://web.stanford.edu/class/cs224w/slides/04-pagerank.pdf) | / | about PageRank and Matrix Factoriztion |
+| [lecture 5](http://web.stanford.edu/class/cs224w/slides/05-message.pdf) | / | About Semi-supervised Node Classification |
 
 
 <br><br>
@@ -67,18 +69,18 @@
 
 ---
 
-# Embedding, Representation Learning
+# About Embedding, Representation Learning
 > Learn the embedding is unsupervised
-- ## Random Walk
-  
+### Random Walk
+
   <img src="md-img/image-20221009005529389.png" alt="image-20221009005529389" style="zoom:28%;" align='left'/>
   <br><br><br><br>  
   Most likely be the neighbor (should be because of their cos similarity) 
   <br>
   <br>
-  
+
   <img src="md-img/image-20221009005422630.png" alt="image-20221009005422630" style="zoom:25%;" align = 'left'/>
-  
+
   <br><br>
   <br>
 
@@ -89,3 +91,38 @@
     - Embed nodes and **sum/average** them
     - Super-node spans (sub)graph, then embed that node
     - Anonymous Walk Embeddings(times each anonymous walk happens or concatenate anonymous walks embeddings)
+
+### Matrix Factorization
+Relevant to Node Similarity. Node Embedding can be expressed as MF.  
+
+- ENCODER: <img src="md-img/image-20221018232552566.png" alt="image-20221018232552566" style="zoom:40%;" />
+
+- DEEPWALK:<img src="md-img/image-20221018232716697.png" alt="image-20221018232716697" style="zoom:40%;" />
+
+
+<br><br><br>
+
+---
+
+# About Message Passing and Collective Classification 
+> Classification relates to feature, neighbors' labels and features.  
+## Leverage correlation, Homophily and Influence, to predict labels
+<br>  
+
+## Collective Classification 3 steps:
+1. ### Local classifier assign initial labels.
+2. ### Relational classifier capture correlations between nodes.
+3. ### Collective Inference propagate correlations through network.
+
+<br>
+
+## 3 Techniques:
+- ### Relational Classification
+
+  <img src="md-img/image-20221019211812872.png" alt="md-img/image-20221019211812872" style="zoom:35%;" />
+
+- ### Iterative Classification
+
+  - Classifier A & B (<font style="color: rgb(250,250,0)">How to Update</font>)
+
+- ### Loopy Belief Propagation
