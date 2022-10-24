@@ -141,3 +141,29 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Last GCN: https://docs.dgl.ai/tutorials/models/1_gnn/1_gcn.html
