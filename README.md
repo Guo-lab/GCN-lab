@@ -7,7 +7,8 @@
 
 
 - ## [Coding Reference](https://gitcode.net/mirrors/PolarisRisingWar/cs224w-2021-winter-colab?utm_source=csdn_github_accelerator)
-
+- ## [Review Reference](https://wwwjn.github.io/blog/posts/15af85cd) and [A project from this author: Analyzed on arXiv Citation Dataset](https://wwwjn.github.io/blog/posts/5ee0fbe5) 学习结束检验漏洞
+- ## [Requirements: Blog Posts](https://github.com/CS224w-KOR/blog) and [with Jupyter](https://github.com/fastai/fastpages#writing-blog-posts-with-jupyter)
 ---
 
 
@@ -21,6 +22,7 @@
 | [lecture 4](http://web.stanford.edu/class/cs224w/slides/04-pagerank.pdf) | / | about PageRank and Matrix Factoriztion |
 | [lecture 5](http://web.stanford.edu/class/cs224w/slides/05-message.pdf) | / | About Semi-supervised Node Classification |
 | [lecture 6](http://web.stanford.edu/class/cs224w/slides/06-GNN1.pdf)| Colab-2 (NEED GPU) | about GNN |
+| [lecture 7](http://web.stanford.edu/class/cs224w/slides/07-GNN2.pdf)| / | about GNN-2 |
 
 
 <br><br>
@@ -143,6 +145,20 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
 
 
 
+<br><br>
+
+
+# From Lecture 6, GCN coming Permutation invariant
+> CNN can be seen as a special GNN with fixed neighbor size and ordering and Transformer layer can be seen as a special GNN that runs on a fullyconnected “word” graph!
+### Basic, Average neighbors 
+
+<img src="md-img/Xnip2022-10-25_22-32-35.png" alt="Xnip2022-10-25_22-32-35" style="zoom:40%;" align='left'/>
+<br><br><br><br><br><br>
+<img src="md-img/image-20221025225548227.png" alt="image-20221025225548227" style="zoom:27%;" align='left'/><br><br>
+
+- AGG, LOSS, TRAIN A SET, GENERATE AS NEEDED
+- same parameters shared by all nodes
+- GNN Layer = Message + Aggregation
 
 
 
@@ -156,14 +172,6 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
 
 
 
-
-
-
-
-
-
-
-
-
+<br>
 
 Last GCN: https://docs.dgl.ai/tutorials/models/1_gnn/1_gcn.html
