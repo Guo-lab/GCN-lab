@@ -150,7 +150,7 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
 
 # From Lecture 6, GCN coming Permutation invariant
 > CNN can be seen as a special GNN with fixed neighbor size and ordering and Transformer layer can be seen as a special GNN that runs on a fullyconnected “word” graph!
-### Basic, Average neighbors 
+## Basic, Average neighbors 
 
 <img src="md-img/Xnip2022-10-25_22-32-35.png" alt="Xnip2022-10-25_22-32-35" style="zoom:40%;" align='left'/>
 <br><br><br><br><br><br>
@@ -159,6 +159,21 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
 - AGG, LOSS, TRAIN A SET, GENERATE AS NEEDED
 - same parameters shared by all nodes
 - GNN Layer = Message + Aggregation
+- GCN and GraphSAGE (2-stage AGG and l2 Normalization to get same scales) and GAT (Attention weights and Multi-head Attention to converge)
+
+## GNN layer could consist of: (in Lecture 8)
+```python
+-> Linear -> BatchNorm -> Dropout -> Activation -> Attention -> Aggregation ->  
+|       Stabilize training                     Control Message |
+|                  Prevent Overfitting                         |
+\________________________ Transformation ______________________/
+```
+- ### Graph Design: [GraphGym](https://github.com/snap-stanford/GraphGym) and [Simple Introduction](https://swarma.org/?p=25051)
+
+
+<br><br><br>
+
+
 
 
 
