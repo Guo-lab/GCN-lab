@@ -23,6 +23,7 @@
 | [lecture 5](http://web.stanford.edu/class/cs224w/slides/05-message.pdf) | / | About Semi-supervised Node Classification |
 | [lecture 6](http://web.stanford.edu/class/cs224w/slides/06-GNN1.pdf)| Colab-2 (NEED GPU) | about GNN |
 | [lecture 7](http://web.stanford.edu/class/cs224w/slides/07-GNN2.pdf)| / | about GNN-2 |
+| [lecture 8](http://web.stanford.edu/class/cs224w/slides/08-GNN-application.pdf)| / | about GNN Graph Augmentation |
 
 
 <br><br>
@@ -161,7 +162,7 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
 - GNN Layer = Message + Aggregation
 - GCN and GraphSAGE (2-stage AGG and l2 Normalization to get same scales) and GAT (Attention weights and Multi-head Attention to converge)
 
-## GNN layer could consist of: (in Lecture 8)
+## GNN layer could consist of: (in Lecture 7)
 ```python
 -> Linear -> BatchNorm -> Dropout -> Activation -> Attention -> Aggregation ->  
 |       Stabilize training                     Control Message |
@@ -173,6 +174,8 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
 
 <br><br><br>
 
+
+# Graph Augmentation : feature & structure
 
 
 
