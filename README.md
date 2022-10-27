@@ -24,6 +24,8 @@
 | [lecture 6](http://web.stanford.edu/class/cs224w/slides/06-GNN1.pdf)| Colab-2 (NEED GPU) | about GNN |
 | [lecture 7](http://web.stanford.edu/class/cs224w/slides/07-GNN2.pdf)| / | about GNN-2 |
 | [lecture 8](http://web.stanford.edu/class/cs224w/slides/08-GNN-application.pdf)| / | about GNN Graph Augmentation |
+| [lecture 9](http://web.stanford.edu/class/cs224w/slides/09-theory.pdf)| / | about GNN Expression (GIN), AGG |
+| [lecture 9](http://web.stanford.edu/class/cs224w/slides/09-theory.pdf)| / | about Heterogeneous Graph and Knowledge Graph |
 
 
 <br><br>
@@ -170,17 +172,17 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
 \________________________ Transformation ______________________/
 ```
 - ### Graph Design: [GraphGym](https://github.com/snap-stanford/GraphGym) and [Simple Introduction](https://swarma.org/?p=25051)
-
+- ### For Training Pipeline, GraphGym and [DeepSNAP](https://github.com/snap-stanford/deepsnap) and [Simple Introduction](https://snap.stanford.edu/deepsnap/notes/introduction.html)
 
 <br><br><br>
 
 
 # Graph Augmentation : feature & structure
+1. ### Feature Augmentation: Constant (Node degree, Clustering coef, Centrality...) and one-hot IDs 
+2. ### Structure Augmentation : Add Virtual N/E, Sampling ... 
 
 
-
-
-
+# Heterogeneous Graph G = (V, E, R, T) in Lecture 10
 
 
 
