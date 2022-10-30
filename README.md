@@ -14,19 +14,20 @@
 
 
 # Checklist:  
-| Slides  |  Colab  |  Description |
+| Slides  |  Description | Colab  |
 | ----------- | ----------- | ----------- |
-| [lecture 1](http://web.stanford.edu/class/cs224w/slides/01-intro.pdf) | /  | just Introduction |
-| [lecture 2](http://web.stanford.edu/class/cs224w/slides/02-tradition-ml.pdf) |  Colab-1  <br> <font style="color: rgb(250,250,0)">**Point: Q7**  | about Features |
-| [lecture 3](http://web.stanford.edu/class/cs224w/slides/03-nodeemb.pdf) | / | |
-| [lecture 4](http://web.stanford.edu/class/cs224w/slides/04-pagerank.pdf) | / | about PageRank and Matrix Factoriztion |
-| [lecture 5](http://web.stanford.edu/class/cs224w/slides/05-message.pdf) | / | About Semi-supervised Node Classification |
-| [lecture 6](http://web.stanford.edu/class/cs224w/slides/06-GNN1.pdf)| Colab-2 (NEED GPU) | about GNN |
-| [lecture 7](http://web.stanford.edu/class/cs224w/slides/07-GNN2.pdf)| / | about GNN-2 |
-| [lecture 8](http://web.stanford.edu/class/cs224w/slides/08-GNN-application.pdf)| / | about GNN Graph Augmentation |
-| [lecture 9](http://web.stanford.edu/class/cs224w/slides/09-theory.pdf)| / | about GNN Expression (GIN), AGG |
-| [lecture 9](http://web.stanford.edu/class/cs224w/slides/09-theory.pdf)| / | about Heterogeneous Graph and Knowledge Graph |
-
+| [lecture 1](http://web.stanford.edu/class/cs224w/slides/01-intro.pdf) | just Introduction |  |
+| [lecture 2](http://web.stanford.edu/class/cs224w/slides/02-tradition-ml.pdf) | about Features | Colab-1  <br> <font style="color: rgb(250,250,0)">**Point: Q7**  |
+| [lecture 3](http://web.stanford.edu/class/cs224w/slides/03-nodeemb.pdf) | |  |
+| [lecture 4](http://web.stanford.edu/class/cs224w/slides/04-pagerank.pdf) | about PageRank and Matrix Factoriztion |  |
+| [lecture 5](http://web.stanford.edu/class/cs224w/slides/05-message.pdf) | About Semi-supervised Node Classification |  |
+| [lecture 6](http://web.stanford.edu/class/cs224w/slides/06-GNN1.pdf)| about GNN | Colab-2 (NEED GPU) |
+| [lecture 7](http://web.stanford.edu/class/cs224w/slides/07-GNN2.pdf)| about GNN-2 |  | 
+| [lecture 8](http://web.stanford.edu/class/cs224w/slides/08-GNN-application.pdf)| about GNN Graph Augmentation | |
+| [lecture 9](http://web.stanford.edu/class/cs224w/slides/09-theory.pdf)| about GNN Expression (GIN), AGG |  | 
+| [lecture 10](http://web.stanford.edu/class/cs224w/slides/09-theory.pdf)| about Heterogeneous Graph and Knowledge Graph | Colab-3 |
+| [lecture 11](http://web.stanford.edu/class/cs224w/slides/11-reasoning.pdf)| about Knowledge Graph Queries |  |
+| [lecture 12](http://web.stanford.edu/class/cs224w/slides/12-motifs.pdf)| about Subgraph |  |
 
 <br><br>
 
@@ -181,13 +182,29 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
 1. ### Feature Augmentation: Constant (Node degree, Clustering coef, Centrality...) and one-hot IDs 
 2. ### Structure Augmentation : Add Virtual N/E, Sampling ... 
 
+# in Lecture 10 and 11
 
-# Heterogeneous Graph G = (V, E, R, T) in Lecture 10
+- ## Heterogeneous Graph G = (V, E, R, T) 
 
+  Heterogenous graph : RGNN (Relational GNN)
 
+- ## Knowledge Graphs (entities, types, relationships)
 
-
-
+  1. <font size=4>TransE</font> : $f = - || h + r - t ||$  
+  (any relation in the same embedding space)
+  2. <font size=4>TransR</font>: Entity Space $R^d$ and Relation Space $R^k$ and Projection Metrix M belongs to $R^{k*d}$   and $f = - || M_r * h + r - M_r * t ||$  
+  (in relation-specific space) 
+  3. <font size=4>Bilinear DistMult</font> : $f_r(h, t) = < h, r, t>$   Cosine Similarity between h*r and t
+  4. <font size=4>ComplEx</font> : $f_r(h, t) = Re< h, r, \overline{t}>$
+  <br><br>
+  ### Answer Predictive Queries :  $f_q(t) = - || q - t ||$ 
+  ### Query2Box : 
+  - Projection Operator `Box x Relation -> Box`
+    - $Cen (q') = Cen (q) + Cen (r)$  
+      $Off (q') = Off (q) + Off (r)$
+  - Geometric Intersection Operator `Box x Box ... -> Box`  
+    - $Cen(q_{inter}) = \sum_{i} w_i  \odot Cen(q_i)$  
+    - $Off(q_{inter}) = min(Off(q_1), ..., Off(q_n)) \odot \sigma(f_{off}(Off(q_1), ..., Off(q_n)))$
 
 
 
