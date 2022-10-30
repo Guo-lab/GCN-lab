@@ -27,7 +27,7 @@
 | [lecture 9](http://web.stanford.edu/class/cs224w/slides/09-theory.pdf)| about GNN Expression (GIN), AGG |  | 
 | [lecture 10](http://web.stanford.edu/class/cs224w/slides/09-theory.pdf)| about Heterogeneous Graph and Knowledge Graph | Colab-3 |
 | [lecture 11](http://web.stanford.edu/class/cs224w/slides/11-reasoning.pdf)| about Knowledge Graph Queries |  |
-| [lecture 12](http://web.stanford.edu/class/cs224w/slides/12-motifs.pdf)| about Subgraph |  |
+| [lecture 12](http://web.stanford.edu/class/cs224w/slides/12-motifs.pdf)| about Subgraph and Motifs |  |
 
 <br><br>
 
@@ -206,6 +206,10 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
     - $Cen(q_{inter}) = \sum_{i} w_i  \odot Cen(q_i)$  
     - $Off(q_{inter}) = min(Off(q_1), ..., Off(q_n)) \odot \sigma(f_{off}(Off(q_1), ..., Off(q_n)))$
 
+
+<br><br><br><br>
+
+# in Lecture 12
 
 
 
