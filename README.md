@@ -28,7 +28,7 @@
 | [lecture 10](http://web.stanford.edu/class/cs224w/slides/09-theory.pdf)| about Heterogeneous Graph and Knowledge Graph | Colab-3 GraphSAGE <font style="color: rgb(250,250,0)">Understand **x=**(x_i, x_j) in propagate|
 | [lecture 11](http://web.stanford.edu/class/cs224w/slides/11-reasoning.pdf)| about Knowledge Graph Queries |  |
 | [lecture 12](http://web.stanford.edu/class/cs224w/slides/12-motifs.pdf)| about Subgraph and Motifs |  |
-| [lecture 13](http://web.stanford.edu/class/cs224w/slides/13-recsys.pdf)| about Recommendation Systems | Colab-4 GAT |
+| [lecture 13](http://web.stanford.edu/class/cs224w/slides/13-recsys.pdf)| about Recommendation Systems | Colab-4 GAT <font style="color: rgb(250,250,0)"> GAT first layer and **alpha** and sum?|
 | [lecture 14](http://web.stanford.edu/class/cs224w/slides/14-communities.pdf)| about Community Network | |
 | [lecture 14-2](http://snap.stanford.edu/class/cs224w-2020/slides/14-traditional-generation.pdf)| in CS224W Winter 2021 | |
 
