@@ -1,7 +1,7 @@
-# GCN-lab  
+# GCN-lab Stanford CS224W Fall 2021 
 - ## [Learn the Open Course](http://web.stanford.edu/class/cs224w/)  
 
-- ## [Video on Bilibili](https://www.bilibili.com/video/BV1Xr4y1q788?spm_id_from=333.337.search-card.all.click&vd_source=b4c6848f0ca53aaf723f77170427ce41)  
+- ## [Video on Bilibili CS224W Winter 2021](https://www.bilibili.com/video/BV1Xr4y1q788?spm_id_from=333.337.search-card.all.click&vd_source=b4c6848f0ca53aaf723f77170427ce41)  
 
 
 
@@ -17,7 +17,7 @@
 | Slides  |  Description | Colab  |
 | ----------- | ----------- | ----------- |
 | [lecture 1](http://web.stanford.edu/class/cs224w/slides/01-intro.pdf) | just Introduction |  |
-| [lecture 2](http://web.stanford.edu/class/cs224w/slides/02-tradition-ml.pdf) | about Features | Colab-1  <br> <font style="color: rgb(250,250,0)">**Point: Q7**  |
+| [lecture 2](http://web.stanford.edu/class/cs224w/slides/02-tradition-ml.pdf) | about Features | Colab-1  <font style="color: rgb(250,250,0)">**Point: Q7**  |
 | [lecture 3](http://web.stanford.edu/class/cs224w/slides/03-nodeemb.pdf) | |  |
 | [lecture 4](http://web.stanford.edu/class/cs224w/slides/04-pagerank.pdf) | about PageRank and Matrix Factoriztion |  |
 | [lecture 5](http://web.stanford.edu/class/cs224w/slides/05-message.pdf) | About Semi-supervised Node Classification |  |
@@ -25,9 +25,12 @@
 | [lecture 7](http://web.stanford.edu/class/cs224w/slides/07-GNN2.pdf)| about GNN-2 |  | 
 | [lecture 8](http://web.stanford.edu/class/cs224w/slides/08-GNN-application.pdf)| about GNN Graph Augmentation | |
 | [lecture 9](http://web.stanford.edu/class/cs224w/slides/09-theory.pdf)| about GNN Expression (GIN), AGG |  | 
-| [lecture 10](http://web.stanford.edu/class/cs224w/slides/09-theory.pdf)| about Heterogeneous Graph and Knowledge Graph | Colab-3 |
+| [lecture 10](http://web.stanford.edu/class/cs224w/slides/09-theory.pdf)| about Heterogeneous Graph and Knowledge Graph | Colab-3 GraphSAGE|
 | [lecture 11](http://web.stanford.edu/class/cs224w/slides/11-reasoning.pdf)| about Knowledge Graph Queries |  |
 | [lecture 12](http://web.stanford.edu/class/cs224w/slides/12-motifs.pdf)| about Subgraph and Motifs |  |
+| [lecture 13](http://web.stanford.edu/class/cs224w/slides/13-recsys.pdf)| about Recommendation Systems | Colab-4 GAT |
+| [lecture 14](http://web.stanford.edu/class/cs224w/slides/14-communities.pdf)| about Community Network | |
+| [lecture 14-2](http://snap.stanford.edu/class/cs224w-2020/slides/14-traditional-generation.pdf)| in CS224W Winter 2021 | |
 
 <br><br>
 
@@ -157,8 +160,11 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
 ## Basic, Average neighbors 
 
 <img src="md-img/Xnip2022-10-25_22-32-35.png" alt="Xnip2022-10-25_22-32-35" style="zoom:40%;" align='left'/>
-<br><br><br><br><br><br>
-<img src="md-img/image-20221025225548227.png" alt="image-20221025225548227" style="zoom:27%;" align='left'/><br><br>
+<br><br>  <br><br>
+<br><br>
+<br><br>
+<img src="md-img/image-20221025225548227.png" alt="image-20221025225548227" style="zoom:27%;" align='left'/>
+<br><br>
 
 - AGG, LOSS, TRAIN A SET, GENERATE AS NEEDED
 - same parameters shared by all nodes
@@ -210,9 +216,40 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
 <br><br><br><br>
 
 # in Lecture 12
+1. ## Random graphs in null model evaluating motif significance via Z-score $Z_i = \frac{(N_i^{real} - \overline{N}_i^{rand})}{std(N_i^{rand})}$
+2. ## Subgraph Matching: in Order Embedding Space  
+   Minimize $\sum_{i=1}^D{\begin{pmatrix}max(0, z_q[i]-z_t[i])\end{pmatrix}^2}$
+
+# in Lecture 13
+1. ## Evaluation Matric $Recall@_K = \frac{|P_u \cap R_u|}{|P_u|}$
+
+2. ## Surrogate losses are differentiable:
+   - ### Binary loss: 
+     ### $- \frac{1}{|E|}\sum{log(\sigma[f_\theta(u, v)])}-\frac{1}{|E_{neg}|}\sum{log(1-\sigma[f_\theta(u, v)])}$ (which unnecessarily penalize model) 
+   - ### Bayesian Personalized Ranking (BPR) loss:
+     ### $\frac{1}{|U|} \sum_{u^*} \{ \frac{1}{|E| |E_{neg}|} \sum_{(u^*, v_{pos})} \sum_{(u^*, v_{neg})} -log(\sigma[f_\theta(u^*, V_{pos})-f_\theta(u^*, V_{neg})]) \}$
+   
+3. ## Function $f_{\theta}$：
+   - ### § Neural Graph Collaborative Filtering (NGCF)
+     (matrix factorization)
+
+     <img src="md-img/image-20221101225653657.png" alt="image-20221101225653657" style="zoom:30%;" />
+   
+     $score(u, v) = h_u^{(K) T} h_v^{(K)}$
+   - ### § LightGCN
+     uses the diffused user/item embeddings <font style="color: rgb(250,250,0)"> Recall, C&S diffusion</font>
+
+   - ### PinSAGE (Pin Embedding)
+     negative sampling strategies: increasing hard negatives (finer-grained predictions)
 
 
 
-<br>
+
+
+
+
+
+
+   <br>
 
 Last GCN: https://docs.dgl.ai/tutorials/models/1_gnn/1_gcn.html
