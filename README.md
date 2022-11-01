@@ -17,7 +17,7 @@
 | Slides  |  Description | Colab  |
 | ----------- | ----------- | ----------- |
 | [lecture 1](http://web.stanford.edu/class/cs224w/slides/01-intro.pdf) | just Introduction |  |
-| [lecture 2](http://web.stanford.edu/class/cs224w/slides/02-tradition-ml.pdf) | about Features | Colab-1  <font style="color: rgb(250,250,0)">**Point: Q7**  |
+| [lecture 2](http://web.stanford.edu/class/cs224w/slides/02-tradition-ml.pdf) | about Features | Colab-1  <font style="color: rgb(250,250,0)">Point: Q7 **Shallow Encoder**  |
 | [lecture 3](http://web.stanford.edu/class/cs224w/slides/03-nodeemb.pdf) | |  |
 | [lecture 4](http://web.stanford.edu/class/cs224w/slides/04-pagerank.pdf) | about PageRank and Matrix Factoriztion |  |
 | [lecture 5](http://web.stanford.edu/class/cs224w/slides/05-message.pdf) | About Semi-supervised Node Classification |  |
@@ -25,7 +25,7 @@
 | [lecture 7](http://web.stanford.edu/class/cs224w/slides/07-GNN2.pdf)| about GNN-2 |  | 
 | [lecture 8](http://web.stanford.edu/class/cs224w/slides/08-GNN-application.pdf)| about GNN Graph Augmentation | |
 | [lecture 9](http://web.stanford.edu/class/cs224w/slides/09-theory.pdf)| about GNN Expression (GIN), AGG |  | 
-| [lecture 10](http://web.stanford.edu/class/cs224w/slides/09-theory.pdf)| about Heterogeneous Graph and Knowledge Graph | Colab-3 GraphSAGE|
+| [lecture 10](http://web.stanford.edu/class/cs224w/slides/09-theory.pdf)| about Heterogeneous Graph and Knowledge Graph | Colab-3 GraphSAGE <font style="color: rgb(250,250,0)">Understand **x=**(x_i, x_j) in propagate|
 | [lecture 11](http://web.stanford.edu/class/cs224w/slides/11-reasoning.pdf)| about Knowledge Graph Queries |  |
 | [lecture 12](http://web.stanford.edu/class/cs224w/slides/12-motifs.pdf)| about Subgraph and Motifs |  |
 | [lecture 13](http://web.stanford.edu/class/cs224w/slides/13-recsys.pdf)| about Recommendation Systems | Colab-4 GAT |
@@ -218,7 +218,7 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
 # in Lecture 12
 1. ## Random graphs in null model evaluating motif significance via Z-score $Z_i = \frac{(N_i^{real} - \overline{N}_i^{rand})}{std(N_i^{rand})}$
 2. ## Subgraph Matching: in Order Embedding Space  
-   Minimize $\sum_{i=1}^D{\begin{pmatrix}max(0, z_q[i]-z_t[i])\end{pmatrix}^2}$
+   Minimize $\sum_{i=1}^D(max(0, z_q[i]-z_t[i]))^2$
 
 # in Lecture 13
 1. ## Evaluation Matric $Recall@_K = \frac{|P_u \cap R_u|}{|P_u|}$
@@ -227,7 +227,7 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
    - ### Binary loss: 
      ### $- \frac{1}{|E|}\sum{log(\sigma[f_\theta(u, v)])}-\frac{1}{|E_{neg}|}\sum{log(1-\sigma[f_\theta(u, v)])}$ (which unnecessarily penalize model) 
    - ### Bayesian Personalized Ranking (BPR) loss:
-     ### $\frac{1}{|U|} \sum_{u^*} \{ \frac{1}{|E| |E_{neg}|} \sum_{(u^*, v_{pos})} \sum_{(u^*, v_{neg})} -log(\sigma[f_\theta(u^*, V_{pos})-f_\theta(u^*, V_{neg})]) \}$
+     ### $\frac{1}{|U|}\sum_{u^* } \{\frac{1}{|E| |E_{neg}|} \sum_{(u^* , v_{pos})} \sum_{(u^* , v_{neg})} -log(\sigma[f_\theta(u^* , V_{pos})-f_\theta(u^* , V_{neg})])\}$
    
 3. ## Function $f_{\theta}$：
    - ### § Neural Graph Collaborative Filtering (NGCF)
@@ -252,4 +252,4 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
 
    <br>
 
-Last GCN: https://docs.dgl.ai/tutorials/models/1_gnn/1_gcn.html
+Last, GCN: https://docs.dgl.ai/tutorials/models/1_gnn/1_gcn.html
