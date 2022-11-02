@@ -29,8 +29,10 @@
 | [lecture 11](http://web.stanford.edu/class/cs224w/slides/11-reasoning.pdf)| about Knowledge Graph Queries |  |
 | [lecture 12](http://web.stanford.edu/class/cs224w/slides/12-motifs.pdf)| about Subgraph and Motifs |  |
 | [lecture 13](http://web.stanford.edu/class/cs224w/slides/13-recsys.pdf)| about Recommendation Systems | Colab-4 GAT <font style="color: rgb(250,250,0)"> GAT first layer and **alpha** and sum?|
-| [lecture 14](http://web.stanford.edu/class/cs224w/slides/14-communities.pdf)| about Community Network | |
-| [lecture 14-2](http://snap.stanford.edu/class/cs224w-2020/slides/14-traditional-generation.pdf)| in CS224W Winter 2021 | |
+| [lecture 14](http://web.stanford.edu/class/cs224w/slides/14-communities.pdf)| about Community Net (Modularity, Super Graph)| |
+| [lecture 14-2](http://snap.stanford.edu/class/cs224w-2020/slides/14-traditional-generation.pdf)| CS224W Winter2021 (Real-World, $G_{np}$, Small-World, and recursive Kronecker Graphs) | |
+| [lecture 15](http://web.stanford.edu/class/cs224w/slides/15-deep-generation.pdf)| about DeepGraph Generation | Colab-5 (Literally NEED GPU to download acm.pkl) |
+
 
 <br><br>
 
