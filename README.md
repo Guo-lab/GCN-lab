@@ -31,9 +31,13 @@
 | [lecture 13](http://web.stanford.edu/class/cs224w/slides/13-recsys.pdf)| about Recommendation Systems | Colab-4 GAT <font style="color: rgb(250,250,0)"> GAT first layer and **alpha** and sum?|
 | [lecture 14](http://web.stanford.edu/class/cs224w/slides/14-communities.pdf)| about Community Net (Modularity, Super Graph)| |
 | [lecture 14-2](http://snap.stanford.edu/class/cs224w-2020/slides/14-traditional-generation.pdf)| CS224W Winter2021 (Real-World, $G_{np}$, Small-World, and recursive Kronecker Graphs) | |
-| [lecture 15](http://web.stanford.edu/class/cs224w/slides/15-deep-generation.pdf)| about DeepGraph Generation | Colab-5 (Literally NEED GPU to download acm.pkl) |
+| [lecture 15](http://web.stanford.edu/class/cs224w/slides/15-deep-generation.pdf)| about DeepGraph Generation, Decoders | Colab-5 (Literally NEED GPU to download acm.pkl) |
+| [lecture 16](http://web.stanford.edu/class/cs224w/slides/16-advanced.pdf)| about GNN **Position**-aware:( and ID-aware, Robustness | | 
+| [lecture 17](http://web.stanford.edu/class/cs224w/slides/17-scalable.pdf)| about GNN Scaling Up  | | 
+| [lecture 19](http://web.stanford.edu/class/cs224w/slides/20-conclusion.pdf)| about  | | 
 
 
+- About Guest [Lecture 18](https://petar-v.com/talks/5G-CS224W.pdf) and [Paper](https://arxiv.org/pdf/2104.13478.pdf) Challenging... ( [Author's platform](https://geometricdeeplearning.com/) [KeynotesTalks](https://geometricdeeplearning.com/keynotes/) and [Blogs](https://geometricdeeplearning.com/blogs/))
 <br><br>
 
 ---
@@ -245,11 +249,32 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
      negative sampling strategies: increasing hard negatives (finer-grained predictions)
 
 
+<br>
+
+# Deep Graph Generation
+1. ## Decoder: 
+   - ### Density Estimation $\quad$ $\theta^* = \argmax \limits_{\theta} \mathbb{E}_{x \sim p_{data}} log(p_{model}(x|\theta))$
+   - ### Sample from $p_{model}$ $\quad$ $x_i = f(z_i; \theta)$
+2. ## GraphRNN
+   node-level and then edge-level (based on RNN hidden states)
+3. ## Graph Convolutional Policy Network (GCPN) 
+   combines Graph Representation (supervised) and Reinforcement Learning (enables goal-directed graph generation)
+
+<br>
+
+# Robustness--Attack and Defend
+- GCN learned $\quad\theta^* = \argmin\limits_{\theta}\mathbb{L}_{train}(\theta; A, X)\quad$ to predict $\quad c_v^* = \argmax\limits_{c}f_{\theta^*}(A, X)_{v, c}$
+- Attacked, GCN $\quad\theta^{*'} = \argmin\limits_{\theta}\mathbb{L}_{train}(\theta; A^{'}, X^{'})\quad$ to predict $\quad c_v^{*'} = \argmax\limits_{c}f_{\theta^{*'}}(A^{'}, X^{'})_{v, c}$
+- $\Delta(v; A^{'}, X^{'}) = log f_{\theta^{*'}}(A^{'}, X^{'})_v,c_{v^{*'}} - log f_{\theta^{*'}}(A^{'}, X^{'})_v,c_{v^{*}}$
+- re-training
 
 
-
-
-
+# Scaling Up
+- Subgraph (mini-batch) on GPU
+  - Neighbor Sampling
+  - Cluster-GCN
+- Simplify GNN into feature-preprocessing operation on CPU
+  - Simplified GCN 
 
 
    <br>
