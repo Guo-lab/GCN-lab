@@ -34,10 +34,11 @@
 | [lecture 15](http://web.stanford.edu/class/cs224w/slides/15-deep-generation.pdf)| about DeepGraph Generation, Decoders | Colab-5 (Literally NEED GPU to download acm.pkl) |
 | [lecture 16](http://web.stanford.edu/class/cs224w/slides/16-advanced.pdf)| about GNN **Position**-aware:( and ID-aware, Robustness | | 
 | [lecture 17](http://web.stanford.edu/class/cs224w/slides/17-scalable.pdf)| about GNN Scaling Up  | | 
-| [lecture 19](http://web.stanford.edu/class/cs224w/slides/20-conclusion.pdf)| about  | | 
+| [lecture 19](http://web.stanford.edu/class/cs224w/slides/20-conclusion.pdf)| about GNN Design Space, Pre-training | | 
 
 
 - About Guest [Lecture 18](https://petar-v.com/talks/5G-CS224W.pdf) and [Paper](https://arxiv.org/pdf/2104.13478.pdf) Challenging... ( [Author's platform](https://geometricdeeplearning.com/) [KeynotesTalks](https://geometricdeeplearning.com/keynotes/) and [Blogs](https://geometricdeeplearning.com/blogs/))
+- Another [Guest Lecture](https://www.bilibili.com/video/BV1Xr4y1q788?p=57&vd_source=f9e4bc78db9b8a1dcb8446b532826fa2) in winter 2021 about Computational Biology
 <br><br>
 
 ---
@@ -270,11 +271,17 @@ Relevant to Node Similarity. Node Embedding can be expressed as MF.
 
 
 # Scaling Up
-- Subgraph (mini-batch) on GPU
-  - Neighbor Sampling
-  - Cluster-GCN
-- Simplify GNN into feature-preprocessing operation on CPU
+- ### Subgraph (mini-batch) on GPU
+  - Neighbor Sampling (sample nodes, for each node, get entire K-hop neighborhood (case: most H neighbors with the highest $Restart_i$))
+  - Cluster-GCN (Sample a community, Louvain, METIS...) partition G into groups of nodes, then mini-batch training over induced subgraph
+  - Advanced Cluster-GCN, AGG the small node group, then get induced subgraph over aggregated node groups (message over groups)
+  
+  <br>
+- ### Simplify GNN into feature-preprocessing operation on CPU
   - Simplified GCN 
+   Remove ReLU, $H^{K} =\tilde{A}^K X W^T$ ($W=W_{K-1}...W_0$, $X\leftarrow \tilde{A}X$ for K times)  
+    - No local structure and computational graph, only self feature  
+    - Need Graph Homophily  
 
 
    <br>
