@@ -31,7 +31,7 @@
 | [lecture 13](http://web.stanford.edu/class/cs224w/slides/13-recsys.pdf)| about Recommendation Systems | Colab-4 GAT <font style="color: rgb(250,250,0)"> GAT first layer and **alpha** and sum?|
 | [lecture 14](http://web.stanford.edu/class/cs224w/slides/14-communities.pdf)| about Community Net (Modularity, Super Graph)| |
 | [lecture 14-2](http://snap.stanford.edu/class/cs224w-2020/slides/14-traditional-generation.pdf)| CS224W Winter2021 (Real-World, $G_{np}$, Small-World, and recursive Kronecker Graphs) | |
-| [lecture 15](http://web.stanford.edu/class/cs224w/slides/15-deep-generation.pdf)| about DeepGraph Generation, Decoders | Colab-5 (Literally NEED GPU to download acm.pkl) |
+| [lecture 15](http://web.stanford.edu/class/cs224w/slides/15-deep-generation.pdf)| about DeepGraph Generation, Decoders | Colab-5 (Literally NEED GPU to download acm.pkl) <font style="color: rgb(200, 150, 250)">HARD</font> |
 | [lecture 16](http://web.stanford.edu/class/cs224w/slides/16-advanced.pdf)| about GNN **Position**-aware:( and ID-aware, Robustness | | 
 | [lecture 17](http://web.stanford.edu/class/cs224w/slides/17-scalable.pdf)| about GNN Scaling Up  | | 
 | [lecture 19](http://web.stanford.edu/class/cs224w/slides/20-conclusion.pdf)| about GNN Design Space, Pre-training | | 
