@@ -36,7 +36,7 @@
 | [lecture 17](http://web.stanford.edu/class/cs224w/slides/17-scalable.pdf)| about GNN Scaling Up  | | 
 | [lecture 19](http://web.stanford.edu/class/cs224w/slides/20-conclusion.pdf)| about GNN Design Space, Pre-training | | 
 
-
+- <font style="color: rgb(250,0,0)"> DO NOT ENDERSTAND </font> about Colab5 <font style="color: rgb(250,250,0)">#! Attention Aggregation Parts, $h_v^l=\sum\limits_m softmax(\frac{1}{|V_d|}\sum\limits_{v\in{V_d}}\quad q_{attn}^T\quad tanh(W_{attn}^{(l)}h_v^{(l)[m]}+b))$</font>
 - About Guest [Lecture 18](https://petar-v.com/talks/5G-CS224W.pdf) and [Paper](https://arxiv.org/pdf/2104.13478.pdf) Challenging... ( [Author's platform](https://geometricdeeplearning.com/) [KeynotesTalks](https://geometricdeeplearning.com/keynotes/) and [Blogs](https://geometricdeeplearning.com/blogs/))
 - Another [Guest Lecture](https://www.bilibili.com/video/BV1Xr4y1q788?p=57&vd_source=f9e4bc78db9b8a1dcb8446b532826fa2) in winter 2021 about Computational Biology
 <br><br>
